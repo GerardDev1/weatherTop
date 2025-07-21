@@ -1,0 +1,20 @@
+<form class="box" action="/station/{{station._id}}/updatereport/{{report._id}}" method="POST">
+  <label>Report Details:</label>
+  <div class="field is-horizontal">
+    <div class="field-body">
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Weather Code" name="code" value="{{report.code}}">
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Wind Speed" name="windspeed" value="{{report.windspeed}}">
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Pressure" name="pressure" value="{{report.pressure}}">
+      </div>
+            <div class="field">
+        <input class="input" type="text" placeholder="Enter Wind Direction" name="pressure" value="{{report.winddirection}}">
+      </div>
+    </div>
+  </div>
+  <button class="button is-primary">Update Track</button>
+</form>

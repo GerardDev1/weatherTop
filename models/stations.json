@@ -1,0 +1,20 @@
+{
+  "file": "./models/stations.json",
+  "stations": [
+    {
+      "title": "Test",
+      "userid": "c6370bb5-7107-45b0-b269-966d2e63741f",
+      "_id": "ea900a48-fe4c-4c49-a4ef-52a1931d0048"
+    },
+    {
+      "title": "",
+      "userid": "c6370bb5-7107-45b0-b269-966d2e63741f",
+      "_id": "62496e03-7e30-4680-8543-a0eeddd15398"
+    },
+    {
+      "title": "Work",
+      "userid": "c6370bb5-7107-45b0-b269-966d2e63741f",
+      "_id": "4b277b71-0dfe-4ea6-a5cb-1e33b9af2e58"
+    }
+  ]
+}
