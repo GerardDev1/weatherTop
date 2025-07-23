@@ -1,6 +1,17 @@
 {{> menu active="dashboard"}}
 
-<section class="section">
-  {{> add-station}}
-  {{> list-stations}}
+<section class="box has-text-centered">
+  <h3 class="is-3 title">
+    Weather Readings
+  </h3>
+  <div class="section">
+    {{> reading-table}}
+  </div>
+  <section class="section">
+    <form action="/dashboard/addreport" method="POST">
+      <div class="field is-grouped">
+        <button class="button is-link">Add Reading</button>
+      </div>
+    </form>
+  </section>
 </section>

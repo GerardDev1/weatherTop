@@ -2,13 +2,13 @@
   "name": "weathertop_v3",
   "version": "1.0.0",
   "description": "A Weather Service App",
-  "homepage": "https://github.com/GerardDev1/weathertop#readme",
+  "homepage": "https://github.com/GerardDev1/weatherTop",
   "bugs": {
-    "url": "https://github.com/GerardDev1/weathertop/issues"
+    "url": "https://github.com/GerardDev1/weatherTop/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GerardDev1/weathertop.git"
+    "url": "git+https://github.com/GerardDev1/weatherTop.git"
   },
   "license": "ISC",
   "author": "Patrick Fox",
@@ -19,6 +19,7 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "axios": "^1.10.0",
     "body-parser": "^1.20.3",
     "cookie-parser": "^1.4.7",
     "express": "^4.21.2",

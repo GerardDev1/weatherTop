@@ -1,5 +1,9 @@
 import { accountsController } from "./accounts-controller.js";
 import { stationStore } from "../models/station-store.js";
+import axios from "axios";
+
+const weatherRequestUrl = `https://api.openweathermap.org/data/2.5/weather?q=Tramore,Ireland&units=metric&appid=065926b23ca8e0fedc623ee8dfd87369`
+
 
 export const dashboardController = {
 
@@ -29,5 +33,25 @@ export const dashboardController = {
     console.log(`Deleting Station ${stationId}`);
     await stationStore.deleteStationById(stationId);
     response.redirect("/dashboard");
+  },
+
+  async addreport(request, response) {
+    console.log("rendering new report");
+    let report = {};
+    const result = await axios.get(weatherRequestUrl);
+    if (result.status == 200) {
+      const currentWeather = result.data;
+      report.code = currentWeather.weather[0].id;
+      report.temperature = currentWeather.main.temp;
+      report.windSpeed = currentWeather.wind.speed;
+      report.pressure = currentWeather.main.pressure;
+      report.windDirection = currentWeather.wind.deg;
+    }
+    console.log(report);
+    const viewData = {
+      title: "Weather Report",
+      reading: report,
+    };
+    response.render("dashboard-view", viewData);
   },
 };

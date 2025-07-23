@@ -26,3 +26,5 @@ router.get("/station/:stationid/editreport/:reportid", reportController.index);
 router.get("/station/:stationid/updateReport/:reportid", reportController.update);
 
 router.get("/about", aboutController.index);
+
+router.post("/dashboard/addreport", dashboardController.addreport);
