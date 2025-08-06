@@ -8,7 +8,18 @@
     {{> reading-table}}
   </div>
   <section class="section">
+    <h2 class="subtitle">Enter location for reading</h2>
     <form action="/dashboard/addreport" method="POST">
+      <div class="field is-horizontal">
+        <div class="field-body">
+          <div class="field">
+            <input class="input" type="text" placeholder="52.160858" name="lat">
+          </div>
+          <div class="field">
+            <input class="input" type="text" placeholder="-7.152420" name="lng">
+          </div>
+        </div>
+      </div>
       <div class="field is-grouped">
         <button class="button is-link">Add Reading</button>
       </div>

@@ -1,5 +1,5 @@
-import { accountsController } from "./accounts-controller.js";
 import { stationStore } from "../models/station-store.js";
+import { accountsController } from "./accounts-controller.js";
 import axios from "axios";
 
 const weatherRequestUrl = `https://api.openweathermap.org/data/2.5/weather?q=Tramore,Ireland&units=metric&appid=065926b23ca8e0fedc623ee8dfd87369`
@@ -38,7 +38,10 @@ export const dashboardController = {
   async addreport(request, response) {
     console.log("rendering new report");
     let report = {};
-    const result = await axios.get(weatherRequestUrl);
+    const lat = request.body.lat;
+    const lng = request.body.lng;
+    const latLongRequestUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=065926b23ca8e0fedc623ee8dfd87369`;
+    const result = await axios.get(latLongRequestUrl);
     if (result.status == 200) {
       const currentWeather = result.data;
       report.code = currentWeather.weather[0].id;

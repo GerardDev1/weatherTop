@@ -21,6 +21,20 @@
       "email": "foxpatrick90@gmail.com",
       "password": "1",
       "_id": "31491e7e-8774-446b-a5f6-8f6965eeda5a"
+    },
+    {
+      "firstName": "Patrick",
+      "lastName": "Fox",
+      "email": "foxpatrick90@gmail.com",
+      "password": "1",
+      "_id": "da7ac8ee-b685-4367-8f64-4b7fa2c78ce7"
+    },
+    {
+      "firstName": "Patrick",
+      "lastName": "Fox",
+      "email": "foxpatrick90@gmail.com",
+      "password": "1",
+      "_id": "dda20893-2db9-4288-8bb8-03a32f3a277d"
     }
   ]
 }
