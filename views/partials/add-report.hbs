@@ -1,26 +1,55 @@
 <form class="box" action="/station/{{station._id}}/addreport" method="POST">
-  <label>Enter Report Details:</label>
-  <div class="field is-horizontal">
-    <div class="field-body">
+  <h2 class="title is-5">Enter New Report Details</h2>
+
+  <div class="columns">
+    <div class="column">
       <div class="field">
-        <input class="input" type="text" placeholder="Enter Weather Code" name="code">
+        <label class="label">Code</label>
+        <div class="control">
+          <input class="input" type="text" name="code" placeholder="00">
+        </div>
       </div>
-            <div class="field">
-        <input class="input" type="text" placeholder="Enter Min Temp" name="mintemp">
-      </div>
-            <div class="field">
-        <input class="input" type="text" placeholder="Enter Max Temp" name="maxtemp">
-      </div>
+    </div>
+    <div class="column">
       <div class="field">
-        <input class="input" type="text" placeholder="Enter Wind Speed" name="windspeed">
-      </div>
-      <div class="field">
-        <input class="input" type="text" placeholder="Enter Pressure" name="pressure">
-      </div>
-            <div class="field">
-        <input class="input" type="text" placeholder="Enter wind direction" name="winddirection">
+        <label class="label">Temperature</label>
+        <div class="control">
+          <input class="input" type="text" name="mintemp" placeholder="00.0°C">
+        </div>
       </div>
     </div>
   </div>
-  <button class="button is-primary">Add Report</button>
+
+  <div class="columns">
+    <div class="column">
+      <div class="field">
+        <label class="label">Wind Speed</label>
+        <div class="control">
+          <input class="input" type="text" name="windspeed" placeholder="00.00 km/h">
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="field">
+        <label class="label">Wind Direction</label>
+        <div class="control">
+          <input class="input" type="text" name="winddirection" placeholder="000°">
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="field">
+        <label class="label">Pressure</label>
+        <div class="control">
+          <input class="input" type="text" name="pressure" placeholder="000 hPa">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="field is-grouped is-grouped-left">
+    <div class="control">
+      <button class="button is-primary">Submit Report</button>
+    </div>
+  </div>
 </form>

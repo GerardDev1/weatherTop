@@ -35,6 +35,27 @@
       "email": "foxpatrick90@gmail.com",
       "password": "1",
       "_id": "dda20893-2db9-4288-8bb8-03a32f3a277d"
+    },
+    {
+      "firstName": "Patrick",
+      "lastName": "Fox",
+      "email": "foxpatrick90@gmail.com",
+      "password": "1",
+      "_id": "9ed4ddfd-b7ce-4384-9a06-f91451677f08"
+    },
+    {
+      "firstName": "Patrick",
+      "lastName": "Fox",
+      "email": "foxpatrick90@gmail.com",
+      "password": "1",
+      "_id": "d5325f4d-d766-43d6-a30f-4f08b492f8ea"
+    },
+    {
+      "firstName": "Patrick",
+      "lastName": "Fox",
+      "email": "foxpatrick90@gmail.com",
+      "password": "1",
+      "_id": "e4b9c817-0887-4b0c-bdb4-e23be10f458a"
     }
   ]
 }

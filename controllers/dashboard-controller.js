@@ -2,7 +2,7 @@ import { stationStore } from "../models/station-store.js";
 import { accountsController } from "./accounts-controller.js";
 import axios from "axios";
 
-const weatherRequestUrl = `https://api.openweathermap.org/data/2.5/weather?q=Tramore,Ireland&units=metric&appid=065926b23ca8e0fedc623ee8dfd87369`
+// const weatherRequestUrl = `https://api.openweathermap.org/data/2.5/weather?q=Tramore,Ireland&units=metric&appid=065926b23ca8e0fedc623ee8dfd87369`
 
 
 export const dashboardController = {
@@ -21,12 +21,14 @@ export const dashboardController = {
     const loggedInUser = await accountsController.getLoggedInUser(request);
     const newStation = {
       title: request.body.title,
+      lat: request.body.lat,
+      lng: request.body.lng,
       userid: loggedInUser._id,
     };
     console.log(`adding station ${newStation.title}`);
     await stationStore.addStation(newStation);
     response.redirect("/dashboard");
-  }, 
+  },
 
   async deleteStation(request, response) {
     const stationId = request.params.id;

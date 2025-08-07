@@ -20,10 +20,13 @@
       <td>
         {{pressure}}
       </td>
-            <td>
+      <td>
         {{winddirection}}
       </td>
       <td>
+        <a href="/station/{{../station._id}}/editreport/{{_id}}" class="button">
+          {{>icons/open}}
+        </a>
         <a href="/station/{{../station._id}}/deletereport/{{_id}}" class="button">
           {{>icons/delete}}
         </a>

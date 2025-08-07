@@ -1,13 +1,49 @@
 {{#each stations}}
 <div class="box box-link-hover-shadow">
-  <h2 class="title">
-    {{title}}
-  </h2>
-  <a href="/station/{{_id}}" class="button">
-    {{>icons/open}}
-  </a>
-  <a href="/dashboard/deletestation/{{_id}}" class="button">
-    {{>icons/delete}}
-  </a>
+  <div class="columns is-multiline">
+
+    <div class="column is-one-fifth">
+      <h2 class="title is-5">{{title}}</h2>
+      <div class="content">
+        <p><strong>Lat:</strong> {{lat}}</p>
+        <p><strong>Long:</strong> {{lng}}</p>
+      </div>
+    </div>
+
+    <div class="column is-one-fifth">
+      <h3 class="subtitle is-6">Weather</h3>
+      <p>{{code}}</p>
+      <p><strong>Icon:</strong> {{weather.icon}}</p>
+    </div>
+
+    <div class="column is-one-fifth">
+      <h3 class="subtitle is-6">Temperature</h3>
+      <p><strong>Current:</strong> {{temp.current}}°C</p>
+      <p><strong>Min:</strong> {{temp.min}}°C</p>
+      <p><strong>Max:</strong> {{temp.max}}°C</p>
+    </div>
+
+    <div class="column is-one-fifth">
+      <h3 class="subtitle is-6">Wind</h3>
+      <p><strong>Speed:</strong> {{windspeed}} km/h</p>
+      <p><strong>Direction:</strong> {{winddirection}}</p>
+    </div>
+
+    <div class="column is-one-fifth">
+      <h3 class="subtitle is-6">Pressure</h3>
+      <p><strong>Value:</strong> {{pressure}} hPa</p>
+    </div>
+
+  </div>
+
+  <div class="buttons mt-3">
+    <a href="/station/{{_id}}" class="button is-small">
+      {{>icons/open}} View
+    </a>
+    <a href="/dashboard/deletestation/{{_id}}" class="button is-danger is-small">
+      {{>icons/delete}} Delete
+    </a>
+  </div>
+
 </div>
 {{/each}}

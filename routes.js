@@ -23,6 +23,7 @@ router.post("/station/:id/addreport", stationController.addReport);
 router.get("/station/:stationid/deletereport/:reportid", stationController.deleteReport);
 
 router.get("/station/:stationid/editreport/:reportid", reportController.index);
+router.post("/station/:stationid/updatereport/:reportid", reportController.update);
 router.get("/station/:stationid/updateReport/:reportid", reportController.update);
 
 router.get("/about", aboutController.index);

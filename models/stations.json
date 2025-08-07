@@ -2,19 +2,18 @@
   "file": "./models/stations.json",
   "stations": [
     {
+      "title": "Athlone",
+      "lat": "53.43333000",
+      "lng": "-7.95000000",
+      "userid": "c6370bb5-7107-45b0-b269-966d2e63741f",
+      "_id": "0b06bc56-0b6a-4a72-bf38-16b52b7b00c6"
+    },
+    {
       "title": "Test",
+      "lat": "0000",
+      "lng": "1111",
       "userid": "c6370bb5-7107-45b0-b269-966d2e63741f",
-      "_id": "ea900a48-fe4c-4c49-a4ef-52a1931d0048"
-    },
-    {
-      "title": "",
-      "userid": "c6370bb5-7107-45b0-b269-966d2e63741f",
-      "_id": "62496e03-7e30-4680-8543-a0eeddd15398"
-    },
-    {
-      "title": "Work",
-      "userid": "c6370bb5-7107-45b0-b269-966d2e63741f",
-      "_id": "4b277b71-0dfe-4ea6-a5cb-1e33b9af2e58"
+      "_id": "794337bc-1649-4bcf-b182-00f7e0034edc"
     }
   ]
 }
