@@ -15,6 +15,7 @@ export const stationController = {
   async addReport(request, response) {
     const station = await stationStore.getStationById(request.params.id);
     const newReport = {
+      date: new Date().toISOString(),
       code: request.body.code,
       temp: request.body.temp,
       windspeed: request.body.windspeed,
@@ -33,4 +34,5 @@ export const stationController = {
     await reportStore.deleteReport(request.params.reportId);
     response.redirect("/station/" + stationId);
   },
+
 };

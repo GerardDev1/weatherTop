@@ -2,13 +2,14 @@ import { stationStore } from "../models/station-store.js";
 import { accountsController } from "./accounts-controller.js";
 import axios from "axios";
 
-// const weatherRequestUrl = `https://api.openweathermap.org/data/2.5/weather?q=Tramore,Ireland&units=metric&appid=065926b23ca8e0fedc623ee8dfd87369`
+//const weatherRequestUrl = `https://api.openweathermap.org/data/2.5/weather?q=Tramore,Ireland&units=metric&appid=065926b23ca8e0fedc623ee8dfd87369`
 
 
 export const dashboardController = {
 
   async index(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request);
+    const stations = await stationStore.getStationsByUserId(loggedInUser._id);
     const viewData = {
       title: "Station Dashboard",
       stations: await stationStore.getStationsByUserId(loggedInUser._id),

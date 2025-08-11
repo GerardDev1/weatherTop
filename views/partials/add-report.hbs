@@ -33,7 +33,19 @@
       <div class="field">
         <label class="label">Wind Direction</label>
         <div class="control">
-          <input class="input" type="text" name="winddirection" placeholder="000°">
+          <div class="select is-fullwidth">
+            <select name="winddirection" required>
+              <option value="" disabled selected>Select Direction</option>
+              <option value="N">N (0°)</option>
+              <option value="NE">NE (45°)</option>
+              <option value="E">E (90°)</option>
+              <option value="SE">SE (135°)</option>
+              <option value="S">S (180°)</option>
+              <option value="SW">SW (225°)</option>
+              <option value="W">W (270°)</option>
+              <option value="NW">NW (315°)</option>
+            </select>
+            </div>
         </div>
       </div>
     </div>
